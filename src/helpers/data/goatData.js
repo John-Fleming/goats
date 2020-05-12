@@ -23,7 +23,7 @@ const goats = [
   },
   {
     id: 'goat3',
-    name: 'mildred',
+    name: 'Mildred',
     color: 'aqua',
     gender: 'male',
     isBusy: true,
