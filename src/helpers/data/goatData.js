@@ -117,7 +117,7 @@ const goats = [
     isBusy: true,
     beardLength: '0',
     isFainter: true,
-    imgUrl: 'https://tinyurl.com/y7nq6vkf',
+    imgUrl: 'https://www.telegraph.co.uk/content/dam/pets/2016/08/11/103675361_jack-the-goat-PETS_trans_NvBQzQNjv4BqZgEkZX3M936N5BQK4Va8RWtT0gK_6EfZT336f62EI5U.jpg',
     age: 10,
   },
   {
@@ -231,4 +231,12 @@ const useGoat = (goatId) => {
   });
 };
 
-export default { getGoats, useGoat };
+const freeGoat = (goatId) => {
+  goats.forEach((response) => {
+    if (response.id === goatId) {
+      response.isBusy = false;
+    }
+  });
+};
+
+export default { getGoats, useGoat, freeGoat };
